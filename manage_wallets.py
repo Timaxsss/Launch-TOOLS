@@ -9,7 +9,7 @@ from solders.system_program import TransferParams, transfer
 from solders.transaction import VersionedTransaction
 
 async def send_sol_multi(sender_private_key: str, csv_file: str, amount_sol: float, mode: str):
-    client = AsyncClient("https://rpc.shyft.to?api_key=VMTouOFcUzCMhHjQ")
+    client = AsyncClient("your_rpc_endpoint")
     sender = Keypair.from_bytes(base58.b58decode(sender_private_key))
     lamports = int(amount_sol * 10**9)
 
